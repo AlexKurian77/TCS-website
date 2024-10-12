@@ -1,0 +1,33 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    height: var(--height);
+    position: sticky;
+    top: 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    min-width: 50vw;
+    font-size: 18px;
+    background-color: var(--other);
+    color: #FBF7F1;
+    border-radius: 30px;
+    padding: 12px 30px;
+    margin-right: 20px;
+}
+
+a{
+    color: var(--background);
+    text-decoration: none;
+}

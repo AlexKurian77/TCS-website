@@ -1,0 +1,35 @@
+body{
+    height: 200vh;
+}
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  text-align: left;
+}
+
+.logo {
+  min-height: 65vh;
+  min-width: 50vw;
+  background-color: #444;
+}
+
+.likha-hua {
+  line-height: 1.8;
+  font-size: 1.2rem;
+  color: var(--other);
+  padding: 20px;
+}
+
+.likha-hua span {
+  display: block;
+  transition: color 0.5s ease, opacity 0.5s ease;
+  opacity: 0.3;
+}

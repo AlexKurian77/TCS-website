@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+  --height:150px;
+  --darkBack: #151414;
+  --lightBack: #FBF7F1;
+  --background: var(--darkBack);
+  --other: var(--lightBack);
+  --rotate: 0deg;
+}
+*{
+  transition: 0.2s;
+}
+/*linear-gradient(110deg,#0c0212,45%,#280d2b,55%,#0f0317)*/
+body{
+  background: linear-gradient(110deg,#08020c,45%,#210a23,55%,#08020c);
+  margin-bottom: 0;
+  font-family: Poppins, 'Aptos Display (Headings)';
+  padding: 0;
+  margin: 0;
+  color: var(--other);
+}
+.navbar{
+  display: flex;
+  gap: 70px;
+  height: 20vh;
+}
+@keyframes rotate {
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate: 360deg;
+  }
+}
