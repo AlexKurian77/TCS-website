@@ -15,6 +15,7 @@
 }
 /*linear-gradient(110deg,#0c0212,45%,#280d2b,55%,#0f0317)*/
 body{
+  overflow-x: hidden;
   background: linear-gradient(110deg,#08020c,45%,#210a23,55%,#08020c);
   margin-bottom: 0;
   font-family: Poppins, 'Aptos Display (Headings)';
