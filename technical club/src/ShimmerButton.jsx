@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import TypingEffect from "./Components/TypingEffect";
 import { Toaster } from "sonner";
 
 export function TailwindcssButtons() {
@@ -9,14 +10,21 @@ export function TailwindcssButtons() {
       <div className="flex justify-start w-full max-w-7xl mx-auto">
         {/* Original */}
         <button
-          className="inline-flex z-10 animate-shimmer h-14 items-center justify-center rounded-[25px] bg-[linear-gradient(110deg,#0c0212,45%,#5c1c64,55%,#0c0212)] bg-[length:200%_100%] px-6 font-medium 
+          className="inline-flex z-10 animate-shimmer w-48 h-14 items-center justify-center rounded-[25px] bg-[linear-gradient(110deg,#0c0212,45%,#5c1c64,55%,#0c0212)] bg-[length:200%_100%] px-6 font-medium 
   text-slate-400 transition-colors transition-transform duration-300 transform before:content-[''] hover:scale-110"
         >
           <span className="transition-transform duration-300 transform">
-            Hack Genesis
+            <TypingEffect
+              steps={[
+                "Hack Genesis!",
+                "Christ University!"
+              ]}
+              speed={100}
+              delay={700}
+              loop={true}
+            />
           </span>
         </button>
-
 
         {/* Border Magic Try */}
         {/* <button
@@ -28,7 +36,6 @@ export function TailwindcssButtons() {
           </span>
         </button>  */}
 
-
         {/* Border Magic From Tailwind */}
         {/* <button className="relative inline-flex h-14 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -36,7 +43,6 @@ export function TailwindcssButtons() {
             Hack Genesis
           </span>
         </button> */}
-
 
         {/* Hover pe animation */}
         {/* <button
