@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 import { Menu, MenuItem } from "./Components/ui/navbar-menu";
 import { cn } from "./utils/cn";
+import "./Components/ui/css/navbar.css"
 
 export function NavbarDemo() {
   return (
-    <div className="relative flex w-[100vw] justify-end items-center">
+    <div id="resp-nav-outer" className="relative flex w-[100vw] justify-end items-center">
       <Navbar />
     </div>
   );
@@ -23,7 +24,7 @@ function Navbar({ className }) {
   };
 
   return (
-    <div className={cn("relative inset-x-0 max-w-4xl z-50 w-3/4", className)}>
+    <div id="responsive-nav" className={cn("relative inset-x-0 max-w-4xl z-50 w-3/4", className)}>
       <Menu setActive={setActive}>
         <div onClick={() => handleScroll("about")}>
           <MenuItem setActive={setActive} active={active} item="About">

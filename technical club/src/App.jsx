@@ -26,6 +26,12 @@ const App = () => {
       <div id="about">
         <About />
       </div>
+      <div id="past-events">
+        <Events />
+      </div>
+      <div id="gallery">
+
+      </div>
     </div>
   );
 };

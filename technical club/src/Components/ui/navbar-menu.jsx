@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import "./css/navbar.css";
 
 const transition = {
   type: "spring",
@@ -12,9 +13,24 @@ const transition = {
 };
 
 export const MenuItem = ({ setActive, active, item, children }) => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1000); // Track if it's desktop
+
+  useEffect(() => {
+    // Update the state based on the window size
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1000);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
+    <div className="relative">
       <motion.p
+        // Only add hover functionality if in desktop mode
+        onMouseEnter={() => isDesktop && setActive(item)}
+        onMouseLeave={() => isDesktop && setActive(false)}
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
       >
@@ -24,10 +40,11 @@ export const MenuItem = ({ setActive, active, item, children }) => {
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.85, y: 10 }}
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className="absolute top-[100%] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
                 layoutId="active"
@@ -46,12 +63,35 @@ export const MenuItem = ({ setActive, active, item, children }) => {
 };
 
 export const Menu = ({ setActive, children }) => {
+  const [menuOpen, setMenuOpen] = useState(false); // For toggling mobile menu
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav
       onMouseLeave={() => setActive(null)}
+      id="navbar"
       className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6" //navbar ka background change krne wali jaga
     >
-      {children}
+      {/* Hamburger for mobile view */}
+      <div
+        className={`hamburger ${menuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      {/* Desktop Menu */}
+      <ul>{children}</ul>
+
+      {/* Mobile Menu */}
+      <div id="mobile-menu" className={menuOpen ? "active" : ""}>
+        {children}
+      </div>
     </nav>
   );
 };

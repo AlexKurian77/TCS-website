@@ -2,20 +2,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   width: 60vw;
+  margin-top: auto;
   text-align: left;
 }
 
 .logo {
+  height: 65vh;
   min-height: 65vh;
   min-width: 50vw;
-  background-color: #444;
+  background-image: url("../../assets/image-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
 }
 
 .likha-hua {
@@ -29,4 +34,10 @@
   display: block;
   transition: color 0.5s ease, opacity 0.5s ease;
   opacity: 0.3;
+}
+
+@media(max-width:1000px){
+  .likha-hua{
+    font-size: 0.9rem;
+  }
 }

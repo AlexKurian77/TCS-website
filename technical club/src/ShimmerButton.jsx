@@ -5,19 +5,20 @@ import { Toaster } from "sonner";
 
 export function TailwindcssButtons() {
   return (
-    <div className="flex w-1/5 items-center">
+    <div id="shimmer-button" className="flex w-1/5 items-center">
       <Toaster position="top-center" />
-      <div className="flex justify-start w-full max-w-7xl mx-auto">
+      <div id="button-div" className="flex justify-start w-full max-w-7xl mx-auto">
         {/* Original */}
         <button
-          className="inline-flex z-10 animate-shimmer w-48 h-14 items-center justify-center rounded-[25px] bg-[linear-gradient(110deg,#0c0212,45%,#5c1c64,55%,#0c0212)] bg-[length:200%_100%] px-6 font-medium 
-  text-slate-400 transition-colors transition-transform duration-300 transform before:content-[''] hover:scale-110"
+          id="button-itself"
+          className="inline-flex z-10 animate-shimmer border min-w-[170px] max-w-[170px] h-14 items-center justify-center rounded-[30px] bg-[linear-gradient(110deg,#0c0212,45%,#5c1c64,55%,#0c0212)] bg-[length:200%_100%] px-6 font-medium 
+  text-slate-400 transition-colors transition-transform duration-300 transform hover:scale-110"
         >
           <span className="transition-transform duration-300 transform">
             <TypingEffect
               steps={[
                 "Hack Genesis!",
-                "Christ University!"
+                "TCS!"
               ]}
               speed={100}
               delay={700}
