@@ -6,7 +6,7 @@ import "./Components/ui/css/navbar.css"
 
 export function NavbarDemo() {
   return (
-    <div id="resp-nav-outer" className="relative flex w-[100vw] justify-end items-center">
+    <div id="resp-nav-outer" className="relative flex w-[100vw] items-center">
       <Navbar />
     </div>
   );

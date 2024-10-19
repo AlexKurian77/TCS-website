@@ -26,13 +26,13 @@ export const MenuItem = ({ setActive, active, item, children }) => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative bg-black" id="hovered-title">
       <motion.p
         // Only add hover functionality if in desktop mode
         onMouseEnter={() => isDesktop && setActive(item)}
         onMouseLeave={() => isDesktop && setActive(false)}
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+        className="cursor-pointer text-white hover:opacity-[0.9] dark:text-white"
       >
         {item}
       </motion.p>
@@ -48,7 +48,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-black dark:bg-black backdrop-blur-sm rounded-[20px] overflow-hidden border border-white/[0.4] dark:border-white/[0.2] shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4">
                   {children}

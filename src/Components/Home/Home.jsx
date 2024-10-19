@@ -38,12 +38,15 @@ const Home = () => {
   return (
     <div className='main-wrapper'>
       <div className='main'>
-        <div className='logo'></div>
+        <div className='big-text'>
+          <div className='line1'>Reimagining the Future</div>
+          <div className='line2'>One Event at a Time</div>
+        </div>
         <div className='likha-hua'>
           <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
           <span>Vel illum error quam minima ipsa ea, quisquam ad iusto ullam</span>
           <span>voluptates sapiente culpa. Quibusdam, blanditiis ex placeat tenetur</span>
-          <span>sunt accusantium porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, fuga.</span>
+          <span>sunt accusantium porro? Lorem ipsum dolor sit amet consectetur</span>
         </div>
       </div>
     </div>

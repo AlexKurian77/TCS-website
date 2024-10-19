@@ -13,10 +13,11 @@ const App = () => {
   
   return (
     <div>
+      <div className="top-circle"></div>
       <Router>
         <div className="navbar">
           <NavbarDemo />
-          <TailwindcssButtons />
+          {/* <TailwindcssButtons /> */}
         </div>
         <Routes>
           <Route path="/" element={<Home />} />

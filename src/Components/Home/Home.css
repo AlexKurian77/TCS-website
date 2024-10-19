@@ -1,33 +1,42 @@
 .main-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  width: 60vw;
-  margin-top: auto;
+  justify-content: center;
+  align-items: center;
   text-align: left;
 }
 
-.logo {
-  height: 65vh;
-  min-height: 65vh;
+.big-text {
+  margin-top: 40px;
+  height: 35vh;
+  min-height: 35vh;
   min-width: 50vw;
-  background-image: url("../../assets/image-removebg-preview.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
+.big-text .line1,
+.big-text .line2 {
+  text-align: center;
+  font-size: 4rem;
+}
+.big-text .line2 {
+  color: #f46700;
+}
 .likha-hua {
+  font-family: "Fira Code", sans-serif;
   line-height: 1.8;
   font-size: 1.2rem;
   color: var(--other);
   padding: 20px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .likha-hua span {
@@ -36,8 +45,11 @@
   opacity: 0.3;
 }
 
-@media(max-width:1000px){
-  .likha-hua{
+@media (max-width: 1000px) {
+  .likha-hua {
     font-size: 0.9rem;
+  }
+  .big-text div{
+    scale: 0.7;
   }
 }
