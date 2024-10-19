@@ -49,11 +49,8 @@
 }
 @media (max-width:900px) {
     .about{
-        padding-top: 40px;
-        margin-top: 70px;
         align-items: center;
         flex-direction: column-reverse;
-        gap: 50px;
     }
     .about-wrapper{
         align-items: center;
@@ -61,6 +58,10 @@
     .about-text{
         text-align: center;
         width: 85%;
+        flex: 1;
+    }
+    .about-image{
+        flex: 1;
     }
     .about-button{
         align-self: center;
