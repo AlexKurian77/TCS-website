@@ -8,7 +8,7 @@ import Sponsor from "./Components/Sponsor/Sponsor";
 import Contact from "./Components/Contact/Contact";
 import { NavbarDemo } from "./nav";
 import { TailwindcssButtons } from "./ShimmerButton";
-import Footer from "./Components/ui/footer";
+import FloatingDockDemo from './Footer'
 
 const App = () => {
   
@@ -32,10 +32,10 @@ const App = () => {
         <Events />
       </div>
       <div id="gallery">
-
+        <Gallery />
       </div>
       <div id="footer">
-        <Footer />
+        <FloatingDockDemo />
       </div>
     </div>
   );

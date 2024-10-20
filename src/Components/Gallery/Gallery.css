@@ -1,0 +1,40 @@
+.gallery-wrapper {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-center {
+  height: 50%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.g-images-center {
+  width: 50%;
+}
+.gallery-text {
+  width: 50%;
+  height: fit-content;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+
+.gtext-wrapper {
+  text-align: start;
+  width: 70%;
+}
+@media (max-width: 640px) {
+  .gallery-text {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 756px) {
+  .gtext-wrapper {
+    width: 100%;
+    margin-left: 50px;
+  }
+}

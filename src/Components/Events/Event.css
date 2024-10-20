@@ -13,11 +13,14 @@
 }
 
 .section-title {
-  font-size: 2rem;
   width: 50%;
+  height: 70%;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  text-align: start;
+  font-size: 3.5rem;
+  color: black;
 }
 
 .event-card {
@@ -114,12 +117,7 @@
   z-index: 1;
   gap: 30px;
 }
-.section-title{
-  text-align: start;
-  font-size: 3.5rem;
-  color: black;
-  height: 70%;
-}
+
 @media (max-width: 611px) {
   .event-card {
     width: 100% !important;
@@ -133,5 +131,10 @@
   .section-wrapper{
     width: 100%;
     margin-left: 50px;
+  }
+}
+@media(max-width:640px){
+  .section-title{
+      font-size: 3rem;
   }
 }

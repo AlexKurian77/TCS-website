@@ -2,4 +2,20 @@
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-bottom: 5px;
+}
+#footer-back{
+    background: url("../../../assets/blkbg.jpg");
+}
+#footer-back *{
+    color: rgba(255, 255, 255, 0.614);
+    transition: 0.2s;
+}
+#footer-back:hover *{
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+}
+#socials span{
+    font-size: 30px;
+    cursor: pointer;
 }
