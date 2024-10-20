@@ -1,13 +1,13 @@
 .main-wrapper {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   text-align: left;
 }
@@ -45,11 +45,18 @@
   opacity: 0.3;
 }
 
+
+
 @media (max-width: 1000px) {
   .likha-hua {
     font-size: 0.9rem;
   }
   .big-text div{
     scale: 0.7;
+  }
+}
+@media(max-width:520px){
+  .main{
+    scale: 0.8;
   }
 }

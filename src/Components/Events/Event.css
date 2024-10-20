@@ -1,6 +1,6 @@
 .events-section {
   position: relative;
-  padding: 50px;
+  padding-top: 50px;
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -14,7 +14,10 @@
 
 .section-title {
   font-size: 2rem;
+  width: 50%;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .event-card {
@@ -28,11 +31,7 @@
   border: 1px solid transparent;
 }
 
-@media (max-width: 611px) {
-  .event-card {
-    width: 100% !important;
-  }
-}
+
 .event-card:hover {
   transform: scale(1.05);
   border: 3x solid rgb(255, 255, 255);
@@ -58,19 +57,24 @@
   color: #666;
 }
 
+.section-wrapper{
+  width: 70%;
+}
+
 .slick-prev::before,
 .slick-next::before {
   color: black;
   font-size: 30px;
 }
 
+
 .slick-prev {
   z-index: 1;
-  left: 10px;
+  left: 15px;
 }
 
 .slick-next {
-  right: 10px;
+  right: 25px;
 }
 
 .slick-prev:hover::before,
@@ -115,4 +119,19 @@
   font-size: 3.5rem;
   color: black;
   height: 70%;
+}
+@media (max-width: 611px) {
+  .event-card {
+    width: 100% !important;
+  }
+  
+}
+@media(max-width:756px){
+  .section-title{
+    width: 100%;
+  }
+  .section-wrapper{
+    width: 100%;
+    margin-left: 50px;
+  }
 }

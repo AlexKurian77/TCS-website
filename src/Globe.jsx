@@ -392,12 +392,12 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex h-screen md:h-auto relative w-full">
+    <div className="flex h-full md:h-auto relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[22rem] bg-[transparent]">
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 pointer-events-none select-none from-transparent z-40" />
-        <div className="absolute w-full h-72 md:h-full z-10 flex justify-center items-center">
+        <div className="absolute w-full bottom-0 inset-x-0 h-full pointer-events-none select-none from-transparent z-40" />
+        <div className="absolute w-full h-full md:h-full z-10 flex justify-center items-center">
           <Suspense fallback={<div>Loading globe...</div>}>
-            <World data={sampleArcs} globeConfig={globeConfig} />
+            <World className="w-full h-full" data={sampleArcs} globeConfig={globeConfig} />
           </Suspense>
         </div>
       </div>

@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './Event.css';
+import "./Event.css";
 
 const Events = () => {
-  const [bgOpacity, setBgOpacity] = useState(0);
-
   const settings = {
     dots: true,
     infinite: true,
     speed: 400,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -35,16 +33,17 @@ const Events = () => {
     ],
   };
 
-
   return (
     <div className="events-section">
-      <div className="background-image" style={{ opacity: bgOpacity }}></div>
+      <div className="background-image"></div>
 
       <div className="content-wrapper">
         <div className="section-title">
-          <span>PAST EV</span>
-          <span style={{color:"#f46700"}}>EN</span>
-          <span>TS</span>
+          <div className="section-wrapper">
+            <span>PAST EV</span>
+            <span style={{ color: "#f46700" }}>EN</span>
+            <span>TS</span>
+          </div>
         </div>
         <Slider {...settings} className="slider">
           <div className="event-card">
@@ -54,7 +53,9 @@ const Events = () => {
               className="event-image"
             />
             <h3 className="event-title">Hack Genesis 2023-24</h3>
-            <p className="event-description">This is the description of the event.</p>
+            <p className="event-description">
+              This is the description of the event.
+            </p>
           </div>
           <div className="event-card">
             <img
@@ -63,7 +64,9 @@ const Events = () => {
               className="event-image"
             />
             <h3 className="event-title">Event Title 2</h3>
-            <p className="event-description">This is the description of the event.</p>
+            <p className="event-description">
+              This is the description of the event.
+            </p>
           </div>
           <div className="event-card">
             <img
@@ -72,7 +75,9 @@ const Events = () => {
               className="event-image"
             />
             <h3 className="event-title">Event Title 3</h3>
-            <p className="event-description">This is the description of the event.</p>
+            <p className="event-description">
+              This is the description of the event.
+            </p>
           </div>
         </Slider>
       </div>

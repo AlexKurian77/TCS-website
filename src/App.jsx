@@ -8,6 +8,7 @@ import Sponsor from "./Components/Sponsor/Sponsor";
 import Contact from "./Components/Contact/Contact";
 import { NavbarDemo } from "./nav";
 import { TailwindcssButtons } from "./ShimmerButton";
+import Footer from "./Components/ui/footer";
 
 const App = () => {
   
@@ -32,6 +33,9 @@ const App = () => {
       </div>
       <div id="gallery">
 
+      </div>
+      <div id="footer">
+        <Footer />
       </div>
     </div>
   );
