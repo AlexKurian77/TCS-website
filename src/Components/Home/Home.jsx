@@ -3,7 +3,6 @@ import './Home.css';
 
 const Home = () => {
   useEffect(() => {
-    document.title = "Technical Club Of School Of Sciences";
 
     const textContainer = document.querySelector('.likha-hua');
     

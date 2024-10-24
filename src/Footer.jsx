@@ -14,14 +14,14 @@ export default function FloatingDockDemo() {
       icon: (
         <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.instagram.com/hackgenesis_25/",
     },
     {
       title: "X (Twitter)",
       icon: (
         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://twitter.com/hackgenesis_24",
     },
     {
       title: "LinkedIn",

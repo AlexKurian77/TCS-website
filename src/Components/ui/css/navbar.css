@@ -50,7 +50,6 @@
   transition: all 0.3s ease;
 }
 
-/* When Hamburger is clicked */
 .hamburger.active div:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
