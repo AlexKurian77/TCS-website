@@ -10,6 +10,7 @@
   --lightBack: #FBF7F1;
   --background: var(--darkBack);
   --other: var(--lightBack);
+  --orange: #f46700;
   --rotate: 0deg;
 }
 
@@ -58,36 +59,23 @@ body{
   color: white;
 }
 #gallery{
+  display: flex;
+  flex-direction: column;
   padding-top: 50px;
+  height: 100vh;
   min-height: 100vh;
 }
 
 .image-slider-wrapper{
   width: 100%;
+  height: 75%;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.arrow {
-  color: white;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-}
-.gallery-wrapper {
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .gallery-text {
   width: 50%;
-  height: fit-content;
-  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   font-size: 3.5rem;

@@ -19,7 +19,6 @@ function Navbar({ className }) {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      window.history.pushState(null, null, `#${id}`);
     }
   };
 
