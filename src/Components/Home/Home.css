@@ -34,7 +34,6 @@
   line-height: 1.8;
   font-size: 1.2rem;
   color: var(--other);
-  padding: 20px;
   text-align: center;
   margin-top: 40px;
 }
@@ -51,12 +50,18 @@
   .likha-hua {
     font-size: 0.9rem;
   }
-  .big-text div{
-    scale: 0.7;
+  .big-text .line1,
+  .big-text .line2{
+    font-size: 3rem;
   }
 }
 @media(max-width:520px){
-  .main{
-    scale: 0.8;
+  .big-text .line1,
+  .big-text .line2{
+    font-size: 2.35rem;
+  }
+  .likha-hua {
+    width: 70%;
+    font-size: 0.8rem;
   }
 }

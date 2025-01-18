@@ -3,7 +3,7 @@
     display: flex;
     width: 100vw;
     min-height: 100vh;
-    min-height: 100vh;
+    max-height: fit-content;
     margin-bottom: 20px;
 }
 .about *{
@@ -66,22 +66,22 @@
     width: 100%;
     height: 100%;
     position: relative;
-  }
+}
 
 .color-orange{
     color: #f46700;
 }
 @media (max-width:900px) {
     .about{
-        align-items: center;
         flex-direction: column-reverse;
+        align-items: center;
     }
     .about-wrapper{
         align-items: center;
     }
     .about-text{
         text-align: center;
-        width: 85%;
+        width: 100%;
         flex: 1;
     }
     .about-image{
@@ -91,14 +91,16 @@
         align-self: center;
     }
     .image{
-        scale: 0.8;
+        width: 100%;
+
     }
 }
 @media(max-width:500px){
     .about{
-        scale: 0.75;
+        scale: 0.8;
     }
     .about-image{
-        width: 90%;
+        scale: 0.7;
+        width: 100%;
     }
 }

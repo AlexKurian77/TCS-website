@@ -80,7 +80,7 @@ export const Menu = ({ setActive, children }) => {
     <nav
       onMouseLeave={() => setActive(null)}
       id="navbar"
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6" //navbar ka background change krne wali jaga
+      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex space-x-4 px-8 py-6" //navbar ka background change krne wali jaga
     >
       {/* Hamburger for mobile view */}
       <div
