@@ -13,10 +13,9 @@ const transition = {
 };
 
 export const MenuItem = ({ setActive, active, item, children }) => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1000); // Track if it's desktop
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1000);
 
   useEffect(() => {
-    // Update the state based on the window size
     const handleResize = () => {
       setIsDesktop(window.innerWidth > 1000);
     };
@@ -28,7 +27,6 @@ export const MenuItem = ({ setActive, active, item, children }) => {
   return (
     <div className="relative bg-black" id="hovered-title">
       <motion.p
-        // Only add hover functionality if in desktop mode
         onMouseEnter={() => isDesktop && setActive(item)}
         onMouseLeave={() => isDesktop && setActive(false)}
         transition={{ duration: 0.3 }}
@@ -63,8 +61,17 @@ export const MenuItem = ({ setActive, active, item, children }) => {
 };
 
 export const Menu = ({ setActive, children }) => {
-  const [menuOpen, setMenuOpen] = useState(false); // For toggling mobile menu
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1000);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1000);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -89,7 +96,7 @@ export const Menu = ({ setActive, children }) => {
       <ul>{children}</ul>
 
       {/* Mobile Menu */}
-      <div id="mobile-menu" className={menuOpen ? "active" : ""}>
+      <div id="mobile-menu" className={menuOpen && !isDesktop ? "active" : ""}>
         {children}
       </div>
     </nav>
